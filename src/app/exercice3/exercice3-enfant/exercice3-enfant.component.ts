@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Exercice3EnfantComponent implements OnInit {
 
+  public useNgContent: boolean = false;
+
+  inverseNgContent():void {
+    this.useNgContent = !this.useNgContent;
+  }
+
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.inverseNgContent();
   }
 
 }
